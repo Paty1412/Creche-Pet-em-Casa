@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="manifest" href="/manifest.json">
+
+</head>
+
+<body>
+  
+
+    <div class="container">
+    <form>
+        <h2>Cadastre-se</h2>
+        <div>
+        <input type="text" id="nome" placeholder="Digite seu nome" maxlength="45">
+        </div>
+        <div>
+        <input type="number" id="cpf" placeholder="CPF" maxlength="11">
+        <form>
+        <div>
+        <input type="text" id="cep" placeholder="CEP" pattern="\d{8}" maxlength="8">
+        </div>
+        <div>
+        <input type="text" placeholder="Logradouro"id="logradouro" maxlength="45">
+        </div>
+        <div>
+        <input type="text" id="cidade" placeholder="Cidade" maxlength="45"> 
+        </div>
+        <div>       
+        <input type="text" id="uf" placeholder="Estado" maxlength="2">
+        </div>
+        <div>
+        <input type="text" id="bairro" placeholder="Bairro" maxlength="45">
+        </div>
+        <div>
+        </div>
+        <div>
+        <button id="buscar">Cadastrar</button>
+        </div>
+        <button id="limpar" onclick="limparCampo()">Limpar</button>
+        <div class="resultado" id="resultado"></div>
+    </form>
+    </div>
+
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="cadastro.js"></script>
+</body>
+</html>
