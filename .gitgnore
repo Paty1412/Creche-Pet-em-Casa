@@ -1,0 +1,48 @@
+# Ignorar arquivos de logs
+*.log
+
+# Ignorar arquivos binários
+*.bin
+*.exe
+*.dll
+*.so
+
+# Ignorar arquivos de backup
+*.bak
+*.swp
+*.swo
+
+# Ignorar diretórios de dependências
+node_modules/
+vendor/
+
+# Ignorar arquivos do sistema operacional
+.DS_Store        # Para macOS
+Thumbs.db        # Para Windows
+
+# Ignorar arquivos de configuração IDE/editor
+.vscode/
+.idea/
+
+# Ignorar arquivos temporários
+*.tmp
+*.temp
+
+# Ignorar arquivos de imagens (se não forem necessários para o repositório)
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# Ignorar arquivos zipados ou compactados
+*.zip
+*.tar.gz
+*.rar
+
+# Ignorar arquivos gerados por builds (compilação)
+dist/
+build/
+
+# Ignorar arquivos de chaves privadas
+*.pem
+*.key
