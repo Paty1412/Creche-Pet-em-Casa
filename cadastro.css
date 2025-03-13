@@ -89,6 +89,57 @@ button:active {
     background-color: #d3a6eb; /* Cor mais suave ao clicar */
     transform: scale(0.98); /* Efeito sutil de pressionado */
 }
+/* Estilo do botão de voltar */
+.btn-voltar {
+    padding: 10px 10px; /* Mais espaço para um botão confortável */
+    background-color: #58cfed; /* Cor suave */
+    border: 2px solid #58cfed; /* Borda delicada */
+    color: white;
+    font-size: 12px; /* Fonte discreta */
+    border-radius: 20px; /* Bordas arredondadas para um toque suave */
+    cursor: pointer;
+    text-transform: uppercase; /* Texto em caixa alta */
+    font-weight: normal; /* Destaca o texto */
+    transition: all 0.3s ease; /* Transição suave */
+    letter-spacing: 1px; /* Espaçamento entre as letras */
+    width: 100%; /* Garante que o botão ocupe toda a largura disponível */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    margin-top: 5px;
+}
+
+/* Efeito de hover */
+.btn-voltar:hover {
+    background-color: #eb76e0; /* Cor de fundo muda para rosa */
+    border-color: #eb76e0; /* A borda também muda de cor */
+    transform: scale(1.05); /* Aumenta um pouco o botão */
+}
+
+/* Efeito de foco */
+.btn-voltar:focus {
+    outline: none; /* Remove a borda de foco padrão */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
+}
+
+/* Efeito de clique */
+.btn-voltar:active {
+    background-color: #d3a6eb; /* Cor mais suave ao clicar */
+    transform: scale(0.98); /* Dá um efeito de "pressionado" */
+}
+
+/* Estilo responsivo */
+@media (max-width: 600px) {
+    .btn-voltar {
+        font-size: 16px; /* Aumenta o tamanho da fonte em telas menores */
+        padding: 12px 25px; /* Aumenta o padding para um botão maior */
+    }
+}
+
+@media (max-width: 400px) {
+    .btn-voltar {
+        font-size: 14px; /* Ajusta a fonte para telas muito pequenas */
+        padding: 10px 20px; /* Reduz o padding para telas menores */
+    }
+}
 
 
 .resultado {
