@@ -7,22 +7,22 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
+    background-color: #eb76e0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     color: #333;
-    background-color: #eb76e0; 
 }
 
 .container {
     background-color: #fff;
     border-radius: 10px;
     padding: 30px;
-    max-width: 400px;
+    max-width: 100%; /* Garante que o container ocupe 100% da largura disponível */
     width: 100%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Inclui o padding no cálculo da largura */
 }
 
 h2 {
@@ -46,6 +46,7 @@ input[type="number"] {
     border-radius: 5px;
     font-size: 16px;
     transition: border-color 0.3s;
+    box-sizing: border-box; /* Garante que o padding não afete a largura */
 }
 
 input[type="text"]:focus,
@@ -53,22 +54,42 @@ input[type="number"]:focus {
     border-color: #080808;
     outline: none;
 }
-
+/* Estilo básico do botão */
 button {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     background-color: #58cfed;
-    border: none;
+    border: 2px solid #58cfed; /* Borda delicada com a mesma cor de fundo */
     color: white;
-    font-size: 16px;
-    border-radius: 5px;
+    font-size: 14px; /* Tamanho de fonte mais discreto */
+    border-radius: 20px; /* Bordas mais arredondadas para um visual mais suave */
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease; /* Transição suave */
+    font-weight: normal; /* Peso de fonte normal para um visual mais leve */
+    text-transform: uppercase; /* Caixa alta no texto */
+    letter-spacing: 1px; /* Aumenta um pouco o espaço entre as letras para mais elegância */
 }
 
+/* Efeito de hover */
 button:hover {
-    background-color: #eb76e0;
+    background-color: #eb76e0; /* Cor de fundo suavemente trocada */
+    color: #fff; /* Texto mantém-se branco */
+    border-color: #eb76e0; /* Borda muda também para a mesma cor de fundo */
+    transform: scale(1.05); /* Leve aumento para indicar que é clicável */
 }
+
+/* Efeito de foco */
+button:focus {
+    outline: none; /* Remove a borda de foco padrão */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Sombra suave ao focar */
+}
+
+/* Efeito de clique */
+button:active {
+    background-color: #d3a6eb; /* Cor mais suave ao clicar */
+    transform: scale(0.98); /* Efeito sutil de pressionado */
+}
+
 
 .resultado {
     margin-top: 20px;
@@ -85,13 +106,35 @@ button:hover {
 
 /* Estilo responsivo */
 @media (max-width: 600px) {
+    body {
+        background-color: #f0f2f5; /* Cor de fundo mais suave em dispositivos móveis */
+        padding: 10px; /* Adiciona um pouco de espaço nas bordas */
+    }
+
     .container {
-        padding: 20px;
+        padding: 15px; /* Menos padding em telas menores */
+        max-width: 90%; /* Limita a largura para 90% */
+    }
+
+    h2 {
+        font-size: 20px; /* Reduz o tamanho do título em dispositivos móveis */
     }
 
     input[type="text"],
     input[type="number"],
     button {
-        font-size: 14px;
+        font-size: 14px; /* Tamanho de fonte reduzido em telas pequenas */
+        padding: 10px; /* Menos padding nos inputs e botão */
+    }
+}
+
+/* Ajustes para tablets e dispositivos de médio porte */
+@media (max-width: 768px) {
+    .container {
+        max-width: 80%; /* Limita a largura para 80% em tablets */
+    }
+
+    h2 {
+        font-size: 22px; /* Um pouco menor que o tamanho original */
     }
 }
